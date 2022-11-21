@@ -8,16 +8,16 @@ export default function Cursos({data}) {
   return (
     <>
       <HeaderNotLogged />
-      <main className='min-h-screen bg-gradient-to-t from-dark to-dark flex-col py-40 flex items-center justify-center '>
+      <main className='flex min-h-screen flex-col items-center justify-center bg-gradient-to-t from-dark to-dark py-40 '>
         <Head>
           <title>Dev Running - Cursos </title>
         </Head>
-        <h1 className='font-raj text-neutral-300 font-medium uppercase text-5xl'>
+        <h1 className='font-raj text-5xl font-medium uppercase text-neutral-300'>
           Todos os cursos disponíveis
         </h1>
-        <section className='w-full min-h-screen  flex px-10  py-40 items-center justify-center gap-12 gap-y-16 flex-wrap'>
+        <section className='flex min-h-screen  w-full flex-wrap  items-center justify-center gap-12 gap-y-16 px-10 py-40'>
           {data.courses.map(course => {
-            return <CoursesCard course={course} />;
+            return <CoursesCard key={Math.random()} course={course} />;
           })}
         </section>
       </main>

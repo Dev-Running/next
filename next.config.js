@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: false,
   swcMinify: false,
+  env: {
+    CHAT_SERVICE: process.env.CHAT_SERVICE,
+  },
   images: {
     domains: [
       "blog.sesisenai.org.br",
@@ -12,8 +15,9 @@ const nextConfig = {
       "img.freepik.com",
       "avatars.githubusercontent.com",
       "lh3.googleusercontent.com",
+      "upload.wikimedia.org",
     ],
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
